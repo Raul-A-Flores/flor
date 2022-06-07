@@ -1,44 +1,37 @@
 import { makeStyles } from '@mui/styles';
-import { height } from '@mui/system';
 
 export default makeStyles((theme) => ({
-
-  movie:{
-      padding: '10px',
-      
+  movie: {
+    padding: '10px',
   },
-  links:{
+  links: {
     alignItems: 'center',
-    fontweight: 'bolder',
+    fontWeight: 'bolder',
     textDecoration: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.up('xs')]: {
       display: 'flex',
       flexDirection: 'column',
     },
     '&:hover': {
       cursor: 'pointer',
-
-    }
+    },
   },
-
-  image:{
+  image: {
     borderRadius: '20px',
     height: '300px',
     marginBottom: '10px',
-    '&hover':{
+    '&:hover': {
       transform: 'scale(1.05)',
-    }
-
+    },
   },
   title: {
-      color: theme.palette.text.primary
-,
-      textOverflow: 'ellipsis',
-      width: '230px',
-      overflow: 'hidden',
-      marginTop: '10px',
-      marginBottom: 0,
-      textAlign: 'center',
-
+    color: theme.palette.text.primary,
+    textOverflow: 'ellipsis',
+    width: '230px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    marginTop: '10px',
+    marginBottom: 0,
+    textAlign: 'center',
   },
 }));

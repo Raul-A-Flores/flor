@@ -9,13 +9,14 @@ export default makeStyles(() => ({
   },
 
   toolbar: {
-    height: '70px',
+    height: '80px',
 
   },
 
   content: {
     flexGrow: 1,
     padding: '2em',
+    width: '100%',
 
   },
 
