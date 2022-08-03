@@ -17,10 +17,8 @@ const Movie = ({movie,i}) => {
             <Tooltip disableTouchListener title={`${movie.vote_average}/ 10`}>
                 <div>
                 <Rating readOnly value={movie.vote_average/2} precision={0.1}/>
-
                 </div>
             </Tooltip>
-   
             </Link>
         </Grow>
     </Grid>
