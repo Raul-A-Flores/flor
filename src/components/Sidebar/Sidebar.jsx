@@ -53,7 +53,7 @@ const Sidebar = ({setMobileOpen}) => {
               <ListItem onClick={()=>dispatch(selectGenreOrCategory(value))} button>
               <ListItemIcon>
                   <img src={genreIcons[label.toLowerCase()]}
-                  className={classes.genereImages}
+                  className={classes.genreImages}
                   height={30}/>
 
                   </ListItemIcon>
@@ -79,7 +79,7 @@ const Sidebar = ({setMobileOpen}) => {
               <ListItem onClick={()=>dispatch(selectGenreOrCategory(id))} button>
                 <ListItemIcon>
                   <img src={genreIcons[name.toLowerCase()]}
-                  className={classes.genereImages}
+                  className={classes.genreImages}
                   height={30}/>
 
                   </ListItemIcon>
