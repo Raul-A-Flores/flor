@@ -3,7 +3,8 @@ import { Box, CircularProgress, useMediaQuery, Typography } from '@mui/material'
 import { useSelector } from 'react-redux';
 
 import { useGetMoviesQuery } from '../../services/TMDB';
-import {  MovieList } from '..';
+import {  MovieList, Pagination } from '..';
+
 
 const Movies = () => {
   const [page, setPage] = useState(1);
@@ -39,6 +40,7 @@ const Movies = () => {
     <div>
       
       <MovieList movies={data} numberOfMovies={numberOfMovies} excludeFirst />
+      <Pagination currentPage={page} setPage={setPage} totalPages={data.total_pages} />
     
     </div>
   );
