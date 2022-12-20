@@ -38,10 +38,12 @@ const Navbar = () => {
           dispatch(setUser(userData));
         } else {
           const sessionId = await createSessionId();
+          
 
           const { data: userData } = await moviesApi.get(`/account?session_id=${sessionId}`);
 
           dispatch(setUser(userData));
+          // console.log(userData)
         }
       }
     };
@@ -91,6 +93,9 @@ const Navbar = () => {
                 {!isMobile && <>
                   {user.username} Movies &nbsp;
                 </>}
+                <div className={classes.language}>
+                  [{user.iso_639_1}]
+                </div>
                 <Avatar
                 style={{width: 30, height: 30}}
                 alt="profile"
@@ -117,9 +122,7 @@ const Navbar = () => {
                   classes.drawerPaper}}
                 ModalProps={{ keepMounted: true }}
                 >
-                  <Sidebar 
-                  setMobileOpen={setMobileOpen}
-                />
+                  <Sidebar setMobileOpen={setMobileOpen}/>
               </Drawer>
             ):(
               <Drawer
@@ -127,9 +130,7 @@ const Navbar = () => {
               variant="permanent"
               open
               >
-                <Sidebar
-              setMobileOpen={setMobileOpen} />
-                
+                <Sidebar setMobileOpen={setMobileOpen} />
               </Drawer>
 
             )}

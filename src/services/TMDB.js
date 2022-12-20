@@ -11,10 +11,10 @@ export const tmdbApi = createApi({
   endpoints: (builder) => ({
 
 
-    getGenres: builder.query({
-      query: () => `/genre/movie/list?api_key=${tmdbApiKey}&language=en-US`,
-
-    }),
+   //* Get Genres
+   getGenres: builder.query({
+    query: () => `genre/movie/list?api_key=${tmdbApiKey}`,
+  }),
 
     getMovies: builder.query({
       query: ({ genreIdOrCategoryName, page, searchQuery }) => {
